@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Basic Calculator Display</title>
+
+    <style>
+        *{
+            box-sizing:border-box;
+        }
+
+        body{
+            margin:0;
+            background:#f4efe2;
+            font-family:Arial, sans-serif;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .container{
+            width:700px;
+            padding:25px 35px 35px;
+            border:4px solid #000;
+            background:#f4efe2;
+        }
+
+        .title-box{
+            border:4px solid #af0000;
+            padding:10px;
+            text-align:center;
+            font-size:28px;
+            font-weight:bold;
+            margin-bottom:25px;
+        }
+
+        .section{
+            border:3px solid #000;
+            padding:15px 20px;
+            margin-bottom:15px;
+            background:#faf4e6;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .section-header{
+            font-size:20px;
+            font-weight:bold;
+            margin-bottom:5px;
+        }
+
+        .expression{
+            font-size:22px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="title-box">Basic Calculator Display</div>
+
+        <div class="section addition">
+            <div>
+                <div class="section-header">Addition</div>
+                <p class="expression"><span class="label"></span> 6 <span class="label">+</span> 7</p>
+            </div>
+            <p id="sumResult">= ...</p>
+        </div>
+
+        <div class="section subtraction">
+            <div>
+                <div class="section-header">Subtraction</div>
+                <p class="expression"><span class="label"></span> 9 <span class="label">-</span> 7</p>
+            </div>
+            <p id="diffResult">= ...</p>
+        </div>
+
+        <div class="section multiplication">
+            <div>
+                <div class="section-header">Multiplication</div>
+                <p class="expression"><span class="label"></span> 5 <span class="label">*</span> 21</p>
+            </div>
+            <p id="prodResult">= ...</p>
+        </div>
+
+        <div class="section division">
+            <div>
+                <div class="section-header">Division</div>
+                <p class="expression"><span class="label"></span> 10 <span class="label">/</span> 5</p>
+            </div>
+            <p id="quoResult">= ...</p>
+        </div>
+    </div>
+
+    <script>
+        let a = 6;
+        let b = 7;
+        let sum = a + b
+        document.getElementById("sumResult").innerHTML = "= " + sum
+
+        let c = 9;
+        let d = 7;
+        let difference = c - d
+        document.getElementById("diffResult").innerHTML = "= " + difference
+
+        let e = 5;
+        let f = 21;
+        let product = e * f
+        document.getElementById("prodResult").innerHTML = "= " + product
+
+        let g = 10;
+        let h = 5;
+        let quotient = g / h
+        document.getElementById("quoResult").innerHTML = "= " + quotient
+    </script>
+
+</body>
+</html>
+```
